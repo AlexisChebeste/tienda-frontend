@@ -1,6 +1,16 @@
+import Header from './components/Header';
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from './pages/Home';
+
 function App() {
   return (
-    <h1 className="text-9xl">hola</h1>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </BrowserRouter>
+    
   )
 }
 
